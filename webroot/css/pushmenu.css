@@ -1,0 +1,125 @@
+#pushcontentwrapper
+{
+    position: relative;
+    width: 100%;
+    -moz-transition: left 100ms ease-in-out, right 100ms ease-in-out;
+    -webkit-transition: left 100ms ease-in-out, right 100ms ease-in-out;
+    transition: left 100ms ease-in-out, right 100ms ease-in-out;
+}
+.pushmenu
+{
+    background-color: #000; /* Fundo do menu */
+    color: #fff; /* cor do botão fechar */
+    width: 340px; /* Tamanho do menu */
+    height: 100%;
+    position: fixed;
+    z-index: 5;
+    font-size: 14px;
+    top: -100%;
+    clear: both;
+    display: block;
+    visibility: 'hidden';
+    overflow-y: auto;
+	overflow-x: hidden;
+    -moz-transition: all 100ms ease-in-out;
+    -webkit-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+.pushmenu.left
+{
+    border-right: 1px solid black;
+    box-shadow: 8px 0 5px rgba(174, 174, 174, .8);
+}
+.pushmenu.right
+{
+    border-left: 4px solid black;
+    box-shadow: -8px 0 5px rgba(174, 174, 174, .8);
+    width: 300px;
+}
+.pushmenu .closebutton
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 32px;
+    text-align: center;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.pushmenu .closebutton:hover
+{
+    color: #ff0000;
+}
+.pushmenu a
+{
+    color: #778899;
+}
+.pushmenu ul.mainnav
+{
+    padding: 0;
+    margin-top: 40px;
+	margin-left:0;
+    list-style: none;
+    font-family: 'Rosario', sans-serif;
+    font-weight: bold;
+}
+.pushmenu ul.mainnav li
+{
+    margin-bottom: 0;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.pushmenu ul.mainnav a
+{
+    font-size: 1.1em;
+	font-weight: bold;
+    padding: 10px;
+    padding-left: 15px;
+    display: block;
+    color: #778899;
+    text-decoration: none;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+.pushmenu ul.mainnav a i
+{
+    color: #999; /* cor dos símbolos da Fontawesome */
+    margin-right: 5px;
+}
+.pushmenu ul.mainnav a:hover i
+{
+    color: #fff; /* cor dos símbolos da Fontawesome - hovered */
+}
+.pushmenu  ul.mainnav a:hover
+{
+    background: #2d4373; /* fundo do menu - hovered */
+    color: #b0e0eb;  /* cor do menu - hovered */
+	border: 1px solid #446CB3; /* borda do menu - hovered */
+}
+.pushmenu.open + .menutoggler
+{
+    opacity: 0.9;
+}
+.menutoggler  /* Cor das 3 barras no script */
+{
+    font-size: 29px; /* Tamanho das 3 barras */
+    font-weight: bold;
+    position: fixed;
+    background: #0000ff; /* Fundo das 3 barras */
+    text-shadow: 1px 1px 2px #ccc;
+	top: 0;
+    left: 0;
+    z-index: 4;
+    padding: 2px 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.menutoggler:hover
+{
+    border: 1px solid transparent; /* borda das 3 barras - hovered */
+}
+.menutoggler.right
+{
+    left: auto;
+    right: 0;
+}
