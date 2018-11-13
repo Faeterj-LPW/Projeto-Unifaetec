@@ -26,7 +26,7 @@
 
             try {
                 $path = str_replace('.php', '', $path);
-                $this->render(implode('/', $path));
+                $this->render(implode('/', $path), 'base');
             } catch (MissingTemplateException $exception) {
                 if (Configure::read('debug')) {
                     throw $exception;
