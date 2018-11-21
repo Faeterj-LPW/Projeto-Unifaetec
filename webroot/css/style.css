@@ -17,23 +17,12 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
-#simple{
-	color: blue !important;
-	padding-top: 10px !important;
-	font-size: 0.6em !important;
-}
-a#simple:link{
-	text-decoration: underline !important;
-}
-
-a#simple:hover{
-	color: red !important;
-	text-decoration: none !important;
-}
-
 p {
-  padding: 0;
-  margin: 0 0 30px 0;
+    line-height: 1.5rem;
+}
+
+p:last-child {
+    margin-bottom: 0px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,14 +32,28 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-/* chart */
-#chartdiv {
-  width: 100%;
-  height: 500px;
+.normal-font{
+	font-weight: normal;
 }
 
-.toplevel{
-	margin-top: 15px;
+.toplevel-1{
+	margin-top: 16px;
+}
+
+.toplevel-2{
+	margin-top: 20px;
+}
+
+.toplevel-3{
+	margin-top: 24px;
+}
+
+.toplevel-4{
+	margin-top: 28px;
+}
+
+.toplevel-5{
+	margin-top: 32px;
 }
 
 .rightlevel{
@@ -64,16 +67,45 @@ h1, h2, h3, h4, h5, h6 {
 .lefttext{
 	text-align: left;
 }
+
 .table.no-border tr td, .table.no-border tr th {
   border-width: 0;
 }
 
-caption {
-  font-size: 16pt;
+#cntr-row-1{
+	width: 460px;
+	margin: 0 auto;
+	float: none;
 }
 
-.jumbotron {
-  padding: 5px inherit;
+#cntr-row-2{
+	width: 540px;
+	margin: 0 auto;
+	float: none;
+}
+
+#cntr-row-3{
+	width: 620px;
+	margin: 0 auto;
+	float: none;
+}
+
+#no-ol{
+	outline: unset;
+}
+
+#simple{
+	color: blue !important;
+	padding-top: 10px !important;
+	font-size: 0.9em !important;
+}
+a#simple:link{
+	text-decoration: underline !important;
+}
+
+a#simple:hover{
+	color: red !important;
+	text-decoration: none !important;
 }
 
 #navfit{
@@ -95,124 +127,180 @@ caption {
 	width: 320px !important;
 }
 
-/*--- Contato ---*/
-#contact {
-  padding: 30px 0;
+
+/* map */
+#map-outer {
+	height: 640px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color:#fff;
+}
+#map-container {
+	height: 600px;
 }
 
-#contact .contact-info {
-  margin-bottom: 20px;
-  text-align: center;
+
+/*--- Chart ---*/
+#chartdiv {
+  width: 100%;
+  height: 500px;
 }
 
-#contact .contact-info i {
-  font-size: 48px;
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #50d8af;
+
+/*--- Preloader ---*/
+.object{
+    width: 25px;
+    height: 25px;
+    background-color: #FFF;
+    float: left;
+
 }
 
-#contact .contact-info address, #contact .contact-info p {
-  margin-bottom: 0;
-  color: #000;
+#loading{
+    background-color: #00a885;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+    left:0;
+    z-index: 9999;
 }
 
-#contact .contact-info h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #999;
+#loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-#contact .contact-info a {
-  color: #000;
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); 
+    -webkit-animation: loading-center-absolute 1.5s infinite;
+    animation: loading-center-absolute 1.5s infinite;
+
 }
 
-#contact .contact-info a:hover {
-  color: #50d8af;
+#object_one {
+    -webkit-animation: object_one 1.5s infinite;
+    animation: object_one 1.5s infinite;
 }
 
-#contact .contact-address, #contact .contact-phone, #contact .contact-email {
-  margin-bottom: 20px;
+#object_two {
+    -webkit-animation: object_two 1.5s infinite;
+    animation: object_two 1.5s infinite;
 }
 
-@media (min-width: 768px) {
-  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
-    padding: 20px 0;
-  }
+#object_three {
+    -webkit-animation: object_three 1.5s infinite;
+    animation: object_three 1.5s infinite;
 }
 
-@media (min-width: 768px) {
-  #contact .contact-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-  }
+#object_four {
+    -webkit-animation: object_four 1.5s infinite;
+    animation: object_four 1.5s infinite;
 }
 
-#contact #google-map {
-  height: 290px;
-  margin-bottom: 20px;
+@-webkit-keyframes loading-center-absolute {
+    100% { -webkit-transform: rotate(-45deg); }
 }
 
-@media (max-width: 576px) {
-  #contact #google-map {
-    margin-top: 20px;
-  }
+@keyframes loading-center-absolute {
+    100% { transform:  rotate(-45deg); -webkit-transform:  rotate(-45deg); }
 }
 
-#contact .form #sendmessage {
-  color: #50d8af;
-  border: 1px solid #50d8af;
-  display: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
+@-webkit-keyframes object_one {
+    25% { -webkit-transform: translate(0,-50px) rotate(-180deg); }
+    100% { -webkit-transform: translate(0,0) rotate(-180deg); }
 }
 
-#contact .form #errormessage {
-  color: red;
-  display: none;
-  border: 1px solid red;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
+@keyframes object_one {
+    25% { transform: translate(0,-50px) rotate(-180deg); -webkit-transform: translate(0,-50px) rotate(-180deg); } 
+    100% { transform: translate(0,0) rotate(-180deg); -webkit-transform: translate(0,0) rotate(-180deg); }
 }
 
-#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
-  display: block;
+@-webkit-keyframes object_two {
+    25% { -webkit-transform: translate(50px,0) rotate(-180deg); }
+    100% { -webkit-transform: translate(0,0) rotate(-180deg); }
 }
 
-#contact .form .validation {
-  color: red;
-  display: none;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 13px;
+@keyframes object_two {
+    25% { transform: translate(50px,0) rotate(-180deg); -webkit-transform: translate(50px,0) rotate(-180deg); } 
+    100% { transform: translate(0,0) rotate(-180deg); -webkit-transform: translate(0,0) rotate(-180deg); }
 }
 
-#contact .form input, #contact .form textarea {
-  padding: 10px 14px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 15px;
+@-webkit-keyframes object_three {
+    25% { -webkit-transform: translate(-50px,0) rotate(-180deg); }
+    100% { -webkit-transform: translate(0,0) rotate(-180deg); }
 }
 
-#contact .form button[type="submit"] {
-  background: #50d8af;
-  border: 0;
-  border-radius: 3px;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  cursor: pointer;
+@keyframes object_three {
+    25% { transform: translate(-50px,0) rotate(-180deg); -webkit-transform: translate(-50px,0) rotate(-180deg); } 
+    100% { transform: translate(0,0) rotate(-180deg); -webkit-transform: rtranslate(0,0) rotate(-180deg); }
 }
 
-#contact .form button[type="submit"]:hover {
-  background: #2dc899;
+@-webkit-keyframes object_four {
+    25% { -webkit-transform: translate(0,50px) rotate(-180deg); }
+    100% { -webkit-transform: translate(0,0) rotate(-180deg); }
 }
+
+@keyframes object_four {
+    25% { transform: translate(0,50px) rotate(-180deg); -webkit-transform: translate(0,50px) rotate(-180deg); } 
+    100% { transform: translate(0,0) rotate(-180deg); -webkit-transform: translate(0,0) rotate(-180deg); }
+}
+
+
+/*--- Sessão do Menu ---*/
+.features_item .f_item_icon{
+    float: left;
+    width:15%;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.features_item .f_item_icon i{
+    font-size:4rem;
+    color:#00a885;
+}
+
+.features_item .f_item_text{
+    display: inline-block;
+    width:75%;
+}
+
+.features_item .f_item_text p{
+    font-size:14px;
+}
+
+.roomy-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.roomy-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.roomy-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.roomy-13 {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
 
 /*--- Checkbox ---*/
 .mark {
@@ -220,6 +308,7 @@ caption {
     position: relative;
     cursor: pointer;
     font-size: 14px;
+	font-weight: normal;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -228,8 +317,8 @@ caption {
 
 .mark input {
     position: relative;
-	margin-bottom: 20px;
-	margin-right: 20px;
+	margin-bottom: 15px;
+	margin-right: 12px;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -243,6 +332,7 @@ caption {
     height: 16px;
     width: 16px;
     background-color: #eee;
+	margin-top: 4px;
 }
 
 .mark:hover input ~ .checkmark {
@@ -280,6 +370,7 @@ caption {
   position: relative;
   cursor: pointer;
   font-size: 14px;
+  font-weight: normal;
   padding-left: 30px;
   margin-bottom: 12px; 
   -webkit-user-select: none;
@@ -336,8 +427,8 @@ caption {
 /*-- Botão voltar ---*/
 #btnbck{
 	position: fixed;
-	right: 10px;
-    bottom: 10px;
+	right: 4px;
+    bottom: 8px;
 	width: 160px;
 	text-align: right;
 	z-index: 1;
@@ -354,19 +445,21 @@ caption {
 	padding-right: 20px;
 }
 
+
 /*--- Rodapé ---*/
 #footer{
-  background: #f2f5f8;
-  padding: 0 0 30px 0;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  font-size: 14px;
-  position: fixed;
-  text-align: center;
+	background: #f2f5f8;    	
+	padding: 30px 0;
+	font-size: 14px;
 }
 
-#footer .copyright {
-  text-align: center;
-  padding-top: 30px;
+#fix-footer{
+	background: #f2f5f8;    	
+	padding: 40px 0;
+	font-size: 14px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	position: fixed;
+	float: none;
 }
