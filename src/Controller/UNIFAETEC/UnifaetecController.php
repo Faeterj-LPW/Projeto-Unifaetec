@@ -1,5 +1,5 @@
 <?php
-    namespace App\Controller;
+    namespace App\Controller\UNIFAETEC;
 
     use App\Controller\AppController;
 
@@ -25,8 +25,9 @@
             $this->set(compact('page', 'subpage'));
 
             try {
+                $this->set('barraTexto', $path[0]);
                 $path = str_replace('.php', '', $path);
-                $this->render(implode('/', $path), 'base');
+                $this->render('/UNIFAETEC/' . implode('/', $path), 'base');
             } catch (MissingTemplateException $exception) {
                 if (Configure::read('debug')) {
                     throw $exception;
