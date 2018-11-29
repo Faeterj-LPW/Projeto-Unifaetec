@@ -62,15 +62,15 @@
 				</div>	
 				<div class="form-group">												    
 					<label class="dot"> Aluno
-						<input type="radio" name="radio" checked="checked">
+						<input type="radio" id="rdaluno" name="radio" checked="checked">
 						<span class="radiodot"></span>
 					</label>
 					<label class="dot"> Professor
-						<input type="radio" name="radio">
+						<input type="radio" id="rdprofessor" name="radio">
 						<span class="radiodot"></span>
 					</label>
 					<label class="dot"> Funcionário
-						<input type="radio" name="radio">
+						<input type="radio" id="rdfuncionario" name="radio">
 						<span class="radiodot"></span>
 					</label>
 				</div>						
@@ -80,7 +80,7 @@
 					<label for="enviar" class="col-sm-2 col-form-label">&nbsp;</label>
 				</div>
 				<div class="form-group">								
-					<button type="button" name="button" id="button" class="btn btn-success" style="font-size:1.2em;width:320px;">Próximo Passo >></button>
+					<button type="button" name="button" id="button" class="btn btn-success" onclick="redirecionar()" style="font-size:1.2em;width:320px;">Próximo Passo >></button>
 				</div>
 			</div>
 		</form>				
@@ -88,4 +88,23 @@
 	<br><br>
 	<br><br><br>
 </section>
+<script>
+	function redirecionar(){
+		localStorage.setItem("nome", document.getElementById('name').value);
+		localStorage.setItem("cpf", document.getElementById('cpf').value);
+		localStorage.setItem("nascimento", document.getElementById('birth').value);
+		localStorage.setItem("email", document.getElementById('email').value);
+		localStorage.setItem("senha", document.getElementById('password').value);
+
+		if (document.getElementById('rdaluno').checked) {
+			window.location.href = "aluno.php";
+		}
+		if (document.getElementById('rdprofessor').checked) {
+			window.location.href = "professor.php";
+		}
+		if (document.getElementById('rdfuncionario').checked) {
+			window.location.href = "funcionario.php";
+		}
+	}
+</script>
 <!-- Fim do formulário de cadastro -->
