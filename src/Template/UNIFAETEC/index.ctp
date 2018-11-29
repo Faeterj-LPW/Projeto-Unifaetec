@@ -12,7 +12,7 @@
 		<br><br>			
 		<!--Formulário-->
 		<h2>Entrar no Sistema</h2>
-		<form action="menu.html" method="post">
+		<form action="" method="post">
 			<div class="form-group">
 				<input type="text" name="email" id="email" class="form-control form-control-lg" style="width:220px;margin:0 auto;" placeholder="Email">
 			</div>
@@ -26,7 +26,7 @@
 				</label>
 			</div>
 			<div class="form-group">
-				<a style="none" href="menu"><button class="btn btn-success" name="button" type="button" style="font-size:1.2em;width:220px;margin-top:-8px;">Entrar</button></a>
+				<button class="btn btn-success" name="button" type="button" style="font-size:1.2em;width:220px;margin-top:-8px;">Entrar</button>
 			</div>
 			<div>
 				<a id="simple" href="cadastro.php">Cadastrar-se</a>
