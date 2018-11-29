@@ -75,9 +75,26 @@
 					<button type="button" name="button" id="button" class="btn btn-success" style="font-size:1.2em;width:320px;">Cadastrar</button>
 				</div>
 			</div>
+			<div>
+				<input type="text" name="nome" id="name" hidden>
+				<input type="text" name="cpf" id="cpf" hidden>
+				<input type="date" name="nascimento" id="birth" hidden>
+				<input type="email" name="email" id="email" hidden>
+				<input type="password" name="senha" id="password" hidden>
+			</div>
 		</form>
 	</div>
 	<br><br><br><br>
 	<br><br><br><br><br>
 </section>
+<script>
+	function pegarDados() {
+		document.getElementById("name").value = localStorage.getItem("nome");
+		document.getElementById("cpf").value = localStorage.getItem("cpf");
+		document.getElementById("birth").value = localStorage.getItem("nascimento");
+		document.getElementById("email").value = localStorage.getItem("email");
+		document.getElementById("password").value = localStorage.getItem("senha");
+	}
+	window.onload = pegarDados;
+</script>
 <!-- Fim do formulário de cadastro -->
