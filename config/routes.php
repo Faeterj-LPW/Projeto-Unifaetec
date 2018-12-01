@@ -69,6 +69,24 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/gerar_doc.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDoc', 'action' => 'display']);
     $routes->connect('/evento:id.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Eventos', 'action' => 'display'])
                     ->setPatterns(['id' => '[0-9]+']);
+    $routes->connect('/conf_presenca.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConfPresenca', 
+                    'action' => 'display']);
+    $routes->connect('/cad_part_ev_ext.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadPartEvExt', 
+                    'action' => 'display']);
+    $routes->connect('/gerar_lista_de_pres.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarListaDePres', 
+                    'action' => 'display']);
+    $routes->connect('/emitir_cert.php', ['prefix' => 'UNIFAETEC', 'controller' => 'EmitirCert', 
+                    'action' => 'display']);
+    $routes->connect('/cadastrar_equipe.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadastrarEquipe', 
+                    'action' => 'display']);
+    $routes->connect('/cadastrar_atv_acd.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadastrarAtvAcd', 
+                    'action' => 'display']);
+    $routes->connect('/consultar_bibl_virt.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarBiblVirt', 
+                    'action' => 'display']);
+    $routes->connect('/inscricao_em_ativ_acad.php', ['prefix' => 'UNIFAETEC', 'controller' => 'InscricaoEmAtivAcad', 
+                    'action' => 'display']);
+    $routes->connect('/gerar_decl_comp.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDeclComp', 
+                    'action' => 'display']);
                     
     #Estatísticas
     $routes->connect('/estatisticas.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Estatisticas', 

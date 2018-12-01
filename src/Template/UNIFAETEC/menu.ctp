@@ -32,6 +32,45 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 		<div class="row">
 			<div class="main_features roomy-13">
 				<div class="col-md-3">
+					<a href="cadastrar_atv_acd.php" id="no-ol">
+						<div class="features_item">
+							<div class="f_item_icon">
+								<i class="fa fa-university"></i>
+							</div>
+							<div class="f_item_text">
+								<h4>Cadastrar Atividade Acadêmica</h4>
+								<p>Cadastramento de atividades a serem realizadas.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="cadastrar_equipe.php" id="no-ol">
+						<div class="features_item">
+							<div class="f_item_icon">
+								<i class="fa fa-users"></i>
+							</div>
+							<div class="f_item_text">
+								<h4>Cadastrar Equipe</h4>
+								<p>Cadastro e consulta de atividades.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="cad_part_ev_ext.php" id="no-ol">
+						<div class="features_item">
+							<div class="f_item_icon">
+								<i class="fa fa-external-link"></i>
+							</div>
+							<div class="f_item_text">
+								<h4>Cadastrar Participação em Evento Externo</h4>
+								<p>Solicitação de participação em evento externo.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
 					<a href="trabalhos.php" id="no-ol">
 						<div class="features_item">
 							<div class="f_item_icon">
@@ -44,8 +83,13 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 						</div>
 					</a>
 				</div>
+			</div>						
+		</div>
+		<!-- Segunda Linha -->
+		<div class="row">
+			<div class="main_features roomy-13">
 				<div class="col-md-3">
-					<a href="#" id="no-ol">
+					<a href="conf_presenca.php" id="no-ol">
 						<div class="features_item">
 							<div class="f_item_icon">
 								<i class="fa fa-address-card-o"></i>									
@@ -58,7 +102,51 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="#" id="no-ol">
+					<a href="consultar_bibl_virt.php" id="no-ol">
+						<div class="features_item">
+							<div class="f_item_icon">
+								<i class="fa fa-book"></i>
+							</div>
+							<div class="f_item_text">
+								<h4>Consultar Biblioteca Virtual</h4>
+								<p>Pesquisar livros disponíveis.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="consultar_historico_atv.php" id="no-ol">
+						<div class="features_item">
+							<div class="f_item_icon">
+								<i class="fa fa-history"></i>
+							</div>
+							<div class="f_item_text">
+								<h4>Consultar Histórico de Atividades</h4>
+								<p>Pesquisa referente a histórico de atividades.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="controle_de_agenda.php" id="no-ol">
+						<div class="features_item">
+							<div class="f_item_icon">
+								<i class="fa fa-calendar"></i>
+							</div>
+							<div class="f_item_text">
+								<h4>Controle de Agenda de Atividades</h4>
+								<p>Cadastro e consulta de atividades.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>						
+		</div>
+		<!-- Terceira Linha -->
+		<div class="row">
+			<div class="main_features roomy-13">
+				<div class="col-md-3">
+					<a href="emitir_cert.php" id="no-ol">
 						<div class="features_item">
 							<div class="f_item_icon">
 								<i class="fa fa-certificate"></i>
@@ -70,24 +158,6 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3">
-					<a href="#" id="no-ol">
-						<div class="features_item">
-							<div class="f_item_icon">
-								<i class="fa fa-sliders"></i>
-							</div>
-							<div class="f_item_text">
-								<h4>Consultar Funcionalidades</h4>
-								<p>Pesquisa e filtragem de funcionalidades do sistema.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>						
-		</div>
-		<!-- Segunda Linha -->
-		<div class="row">
-			<div class="main_features roomy-13">
 				<div class="col-md-3">
 					<a href="estatisticas.php" id="no-ol">
 						<div class="features_item">
@@ -102,33 +172,7 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="#" id="no-ol">
-						<div class="features_item">
-							<div class="f_item_icon">
-								<i class="fa fa-external-link"></i>
-							</div>
-							<div class="f_item_text">
-								<h4>Cadastrar Participação em Evento Externo</h4>
-								<p>Solicitação de participação em evento externo.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#" id="no-ol">
-						<div class="features_item">
-							<div class="f_item_icon">
-								<i class="fa fa-user-plus"></i>
-							</div>
-							<div class="f_item_text">
-								<h4>Inscrição em Atividade Acadêmica</h4>
-								<p>Solicitação de participação em atividade acadêmica.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#" id="no-ol">
+					<a href="gerar_decl_comp.php" id="no-ol">
 						<div class="features_item">
 							<div class="f_item_icon">
 								<i class="fa fa-file-o"></i>
@@ -136,50 +180,6 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 							<div class="f_item_text">
 								<h4>Gerar Declaração de Comparecimento</h4>
 								<p>Impressão de declaração de comparecimento em atividade.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>						
-		</div>
-		<!-- Terceira Linha -->
-		<div class="row">
-			<div class="main_features roomy-13">
-				<div class="col-md-3">
-					<a href="#" id="no-ol">
-						<div class="features_item">
-							<div class="f_item_icon">
-								<i class="fa fa-address-book-o"></i>
-							</div>
-							<div class="f_item_text">
-								<h4>Gerar Lista de Presença</h4>
-								<p>Listagem de presença em uma atividade.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="#" id="no-ol">
-						<div class="features_item">
-							<div class="f_item_icon">
-								<i class="fa fa-book"></i>
-							</div>
-							<div class="f_item_text">
-								<h4>Consultar Biblioteca Virtual</h4>
-								<p>Pesquisar livros disponíveis.</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3">
-					<a href="controle_de_agenda.php" id="no-ol">
-						<div class="features_item">
-							<div class="f_item_icon">
-								<i class="fa fa-calendar"></i>
-							</div>
-							<div class="f_item_text">
-								<h4>Controle de Agenda de Atividades</h4>
-								<p>Cadastro e consulta de atividades.</p>
 							</div>
 						</div>
 					</a>
@@ -199,31 +199,33 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 				</div>
 			</div>						
 		</div>
-		<!-- Quarta Linha -->
-		<div style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+	</div>
+	<!-- Quarta Linha -->
+	<div style="display:flex;flex-direction:row;justify-content:center;align-items:center;">
+		<div class="row">
 			<div class="main_features roomy-13">
 				<div class="col-md-4">
-					<a href="consultar_historico_atv.php" id="no-ol">
+					<a href="gerar_lista_de_pres.php" id="no-ol">
 						<div class="features_item">
 							<div class="f_item_icon">
-								<i class="fa fa-history"></i>
+								<i class="fa fa-address-book-o"></i>
 							</div>
 							<div class="f_item_text">
-								<h4>Consultar Histórico de Atividades</h4>
-								<p>Pesquisa referente a histórico de atividades.</p>
+								<h4>Gerar Lista de Presença</h4>
+								<p>Listagem de presença em uma atividade.</p>
 							</div>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4">
-					<a href="cadastrar_atv_acd.php" id="no-ol">
+					<a href="inscricao_em_ativ_acad.php" id="no-ol">
 						<div class="features_item">
 							<div class="f_item_icon">
-								<i class="fa fa-university"></i>
+								<i class="fa fa-user-plus"></i>
 							</div>
 							<div class="f_item_text">
-								<h4>Cadastrar Atividade Acadêmica</h4>
-								<p>Cadastramento de atividades a serem realizadas.</p>
+								<h4>Inscrição em Atividade Acadêmica</h4>
+								<p>Solicitação de participação em atividade acadêmica.</p>
 							</div>
 						</div>
 					</a>
@@ -244,6 +246,6 @@ $this->Html->script(['/js/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => tr
 			</div>						
 		</div>
 	</div>
-	<br><br>
+	<br>
 </section>
 <!-- Fim de Itens do Menu -->
