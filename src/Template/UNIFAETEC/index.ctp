@@ -1,9 +1,11 @@
 <!-- Seção de Login -->
 <section class="text-center">
-	<div class="container">
-		<div class="mx-auto text-center">
-			<img src="img/faetec.jpg" class="img-responsive mx-auto d-block">
-		</div>	
+	<div class="container-fluid pb-5">
+		<div class="row">
+			<div class="col-md-10 mx-auto text-center">
+				<img src="img/faetec.jpg" class="img-fluid">
+			</div>	
+		</div>
 		<!--Feedback do que ocorreu-->
 		<!--Menssagem enviada-->
 		<div id="sendmessage"></div>
@@ -11,28 +13,30 @@
 		<div id="errormessage"></div>
 		<br><br>			
 		<!--Formulário-->
-		<h2>Entrar no Sistema</h2>
-		<form action="menu.html" method="post">
-			<div class="form-group">
-				<input type="text" name="email" id="email" class="form-control form-control-lg" style="width:220px;margin:0 auto;" placeholder="Email">
+		<h5>Entrar no Sistema</h5>
+		<!-- Método GET para permitir acesso ao menu temporariamente -->
+		<form action="menu.php" method="get">
+			<div class="form-row form-group">
+				<div class="col-xs-3 mx-auto">
+					<input type="text" name="email" id="email" class="form-control" placeholder="Email">
+				</div>
 			</div>
-			<div class="form-group">
-				<input type="password" name="senha" id="password" class="form-control form-control-lg" style="width:220px;margin:0 auto;" placeholder="Senha">
+			<div class="form-row form-group mb-3">
+				<div class="col-xs-3 mx-auto">
+					<input type="password" name="senha" id="password" class="form-control" placeholder="Senha">
+				</div>
 			</div>
-			<div class="form-group">
-				<label class="mark" style="background-color: transparent;">
-					<input type="checkbox" checked="checked"> Lembrar-se de mim
-					<span class="checkmark"></span>
-				</label>
+			<label class="mark" style="background-color: transparent;">
+				<input class="ml-1" type="checkbox" checked="checked">Lembrar-se de mim
+				<span class="checkmark"></span>
+			</label>
+			<div class="form-row form-group mt-2">
+				<div class="col-xs-3 mx-auto">
+					<button class="btn btn-success px-5" name="button" type="submit">Entrar</button>
+				</div>
 			</div>
-			<div class="form-group">
-				<a style="none" href="menu"><button class="btn btn-success" name="button" type="button" style="font-size:1.2em;width:220px;margin-top:-8px;">Entrar</button></a>
-			</div>
-			<div>
-				<a id="simple" href="cadastro.php">Cadastrar-se</a>
-			</div>
+			<a class="p-0" id="simple" href="cadastro.php">Cadastrar-se</a>
 		</form>
 	</div>
-	<br><br><br><br>
 </section>
 <!-- Fim da Seção Login -->

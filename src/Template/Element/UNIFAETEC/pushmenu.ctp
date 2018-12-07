@@ -1,3 +1,20 @@
+<?php 
+
+$this->Html->css('/css/pushmenu.css', ['block' => true]);
+$this->Html->script('/js/pushmenu.js', ['block' => true]);
+
+?>
+
+<!-- Correção de cor do menu  -->
+<style scoped>
+	.menutoggler {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,255,0);
+	}
+</style>
+
 <!-- Push Menu -->
 <div id="pushcontentwrapper">
 	<nav id="pushmenu1" class="pushmenu">
@@ -12,3 +29,24 @@
 	</nav>
 </div>
 <!-- Fim do Push Menu -->
+
+<!-- Biblioteca JavaScript -->
+<?php $this->append('script'); ?>
+<script>
+	jQuery(function() { 
+		menu1 = new pushmenu({ 
+			menuid: 'pushmenu1',
+			position: 'left',
+			marginoffset: 0,
+			revealamt: -8,
+			onopenclose:function(state) {
+				var $buttonref = $('#drawer');
+				if (state == 'open')
+					$buttonref.addClass('open');
+				else
+					$buttonref.removeClass('open');		
+			}
+		})
+	});
+</script>
+<?php $this->end(); ?>

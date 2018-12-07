@@ -37,12 +37,10 @@ class AppView extends View
     public function initialize()
     {
         $this->Html->meta('icon', 'img/faetec.ico', ['block' => true]);
-		$this->Html->css([
-            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css', 
-            'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700', 
-            '/lib/bootstrap/css/bootstrap.css', '/css/style.css'], ['block' => true]);
-        $this->Html->script([
-			'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', 
-            'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'], ['block' => true]);
+		$this->Html->css(['https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700', 
+                          '/lib/fontawesome/css/all.css', '/lib/bootstrap/css/bootstrap.css', 
+                          '/css/style.css', '/css/sticky-footer.css'], ['block' => true]);
+        $this->Html->script(['/lib/jquery/jquery-3.0.0.min.js', '/lib/jquery/jquery-migrate-3.0.1.min.js',
+                             '/lib/bootstrap/js/bootstrap.js'], ['block' => true]);
     }
 }

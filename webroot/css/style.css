@@ -2,7 +2,6 @@ body{
   background: #fff;
   color: #444;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.4em;
   overflow: auto;
 }
 
@@ -425,41 +424,25 @@ a#simple:hover{
 }
 
 /*-- Botão voltar ---*/
-#btnbck{
-	position: fixed;
-	right: 4px;
-    bottom: 8px;
-	width: 160px;
-	text-align: right;
-	z-index: 1;
+#btnbck {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 3rem;
+    margin-top: -2rem;
+    line-height: 2rem;
+    text-align: center;
 }
-
-#btnbck .imgbtn{
-	text-align: right;
-	padding-right: 45px;
-	margin-top: -35px;
-}
-
-#btnbck .txtbtn{
-	text-align: right;
-	padding-right: 20px;
-}
-
 
 /*--- Rodapé ---*/
 #footer{
 	background: #f2f5f8;    	
 	padding: 30px 0;
-	font-size: 14px;
 }
 
-#fix-footer{
-	background: #f2f5f8;    	
-	padding: 40px 0;
-	font-size: 14px;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	position: fixed;
-	float: none;
+/* Alinhamento vertical */
+.valign {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }

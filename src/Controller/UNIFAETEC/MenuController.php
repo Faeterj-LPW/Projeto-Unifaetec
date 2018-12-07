@@ -7,6 +7,7 @@
     {
         public function display(...$path)
         {
+            $this->set('botaoAusente', true);
             $this->set('title', 'Menu Principal');
             $this->set('barraTexto', 'Menu');
             $this->render('/UNIFAETEC/menu', 'base');

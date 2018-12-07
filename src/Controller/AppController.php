@@ -51,5 +51,7 @@ class AppController extends Controller
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+        
+        \Cake\Cache\Cache::disable();
     }
 }

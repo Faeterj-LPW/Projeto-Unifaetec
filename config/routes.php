@@ -51,10 +51,10 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/', ['prefix' => 'UNIFAETEC', 'controller' => 'Index', 'action' => 'display']);
 
     #Páginas de cadastro
-    $routes->connect('/cadastro.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Cadastro', 'action' => 'display']);
-    $routes->connect('/aluno.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Aluno', 'action' => 'display']);
-    $routes->connect('/funcionario.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Funcionario', 'action' => 'display']);
-    $routes->connect('/professor.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Professor', 'action' => 'display']);
+    $routes->connect('/cadastro.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Cadastro', 'action' => 'display']);
+    $routes->connect('/aluno.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Aluno', 'action' => 'display']);
+    $routes->connect('/funcionario.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Funcionario', 'action' => 'display']);
+    $routes->connect('/professor.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Professor', 'action' => 'display']);
     
     #Menu
     $routes->connect('/menu.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Menu', 'action' => 'display']);
@@ -62,40 +62,45 @@ Router::scope('/', function (RouteBuilder $routes) {
     #Funcionalidades
     $routes->connect('/consultar_historico_atv.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarHistoricoAtv', 
                     'action' => 'display']);
-    $routes->connect('/controle_de_agenda.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ControleDeAgenda', 
-                    'action' => 'display']);
     $routes->connect('/trabalhos.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadastroTrabAcd', 
                     'action' => 'display']);
     $routes->connect('/gerar_doc.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDoc', 'action' => 'display']);
     $routes->connect('/evento:id.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Eventos', 'action' => 'display'])
                     ->setPatterns(['id' => '[0-9]+']);
-    $routes->connect('/conf_presenca.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConfPresenca', 
-                    'action' => 'display']);
-    $routes->connect('/cad_part_ev_ext.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadPartEvExt', 
-                    'action' => 'display']);
-    $routes->connect('/gerar_lista_de_pres.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarListaDePres', 
-                    'action' => 'display']);
-    $routes->connect('/emitir_cert.php', ['prefix' => 'UNIFAETEC', 'controller' => 'EmitirCert', 
-                    'action' => 'display']);
     $routes->connect('/cadastrar_equipe.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadastrarEquipe', 
-                    'action' => 'display']);
-    $routes->connect('/cadastrar_atv_acd.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadastrarAtvAcd', 
                     'action' => 'display']);
     $routes->connect('/consultar_bibl_virt.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarBiblVirt', 
                     'action' => 'display']);
-    $routes->connect('/inscricao_em_ativ_acad.php', ['prefix' => 'UNIFAETEC', 'controller' => 'InscricaoEmAtivAcad', 
-                    'action' => 'display']);
     $routes->connect('/gerar_decl_comp.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDeclComp', 
+                    'action' => 'display']);
+
+    #Eventos
+    $routes->connect('/cad_part_ev_ext.php', ['prefix' => 'UNIFAETEC/Eventos', 'controller' => 'CadPartEvExt', 
+                    'action' => 'display']);
+    $routes->connect('/emitir_cert.php', ['prefix' => 'UNIFAETEC/Eventos', 'controller' => 'EmitirCert', 
+                    'action' => 'display']);
+    $routes->connect('/conf_presenca.php', ['prefix' => 'UNIFAETEC/Eventos', 'controller' => 'ConfPresenca', 
+                    'action' => 'display']);
+
+
+    #Atividades
+    $routes->connect('/inscricao_em_ativ_acad.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'InscricaoEmAtivAcad', 
+                    'action' => 'display']);
+    $routes->connect('/controle_de_agenda.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'ControleDeAgenda', 
+                    'action' => 'display']);
+    $routes->connect('/cadastrar_atv_acd.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'CadastrarAtvAcd', 
+                    'action' => 'display']);
+    $routes->connect('/gerar_lista_de_pres.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'GerarListaDePres', 
                     'action' => 'display']);
                     
     #Estatísticas
-    $routes->connect('/estatisticas.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Estatisticas', 
+    $routes->connect('/estatisticas.php', ['prefix' => 'UNIFAETEC/Estatisticas', 'controller' => 'Estatisticas', 
                     'action' => 'display']);
-    $routes->connect('/estatisticas_nsa.php', ['prefix' => 'UNIFAETEC', 'controller' => 'EstatisticasNsa', 
+    $routes->connect('/estatisticas_nsa.php', ['prefix' => 'UNIFAETEC/Estatisticas', 'controller' => 'EstatisticasNsa', 
                     'action' => 'display']);
-    $routes->connect('/estatisticas_tac.php', ['prefix' => 'UNIFAETEC', 'controller' => 'EstatisticasTac', 
+    $routes->connect('/estatisticas_tac.php', ['prefix' => 'UNIFAETEC/Estatisticas', 'controller' => 'EstatisticasTac', 
                     'action' => 'display']);
-    $routes->connect('/estatisticas_lre.php', ['prefix' => 'UNIFAETEC', 'controller' => 'EstatisticasLre', 
+    $routes->connect('/estatisticas_lre.php', ['prefix' => 'UNIFAETEC/Estatisticas', 'controller' => 'EstatisticasLre', 
                     'action' => 'display']);
 
     #Regras genéricas

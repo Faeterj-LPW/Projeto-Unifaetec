@@ -19,7 +19,6 @@
 			<?= $this->fetch('content') ?>
 		<!-- Fim do conteúdo -->
 			
-		<!-- Gambiarra para rodapés com botão "voltar ao menu" :( -->
 		<!-- Rodapé -->
 			<?= (!empty($rodapeAusente)) ? '' : $this->element('/UNIFAETEC/rodape') ?>
 		<!-- Fim do Rodapé -->
