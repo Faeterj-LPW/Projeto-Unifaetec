@@ -63,7 +63,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/consultar_historico_atv.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarHistoricoAtv', 
                     'action' => 'display']);
     $routes->connect('/trabalhos.php', ['prefix' => 'UNIFAETEC', 'controller' => 'CadastroTrabAcd', 
-                    'action' => 'display']);
+                    'action' => 'display', '_method' => 'GET']);
     $routes->connect('/gerar_doc.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDoc', 'action' => 'display']);
     $routes->connect('/evento:id.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Eventos', 'action' => 'display'])
                     ->setPatterns(['id' => '[0-9]+']);
@@ -102,6 +102,9 @@ Router::scope('/', function (RouteBuilder $routes) {
                     'action' => 'display']);
     $routes->connect('/estatisticas_lre.php', ['prefix' => 'UNIFAETEC/Estatisticas', 'controller' => 'EstatisticasLre', 
                     'action' => 'display']);
+
+    #Rotas REST
+    $routes->resources('CadastroTrabAcd', ['prefix' => 'UNIFAETEC', 'path' => 'trabalhos.php']);
 
     #Regras genéricas
     $routes->connect('/*', ['prefix' => 'UNIFAETEC', 'controller' => 'Unifaetec', 'action' => 'display']);

@@ -15,7 +15,7 @@
 		<!--Formulário-->
 		<h5>Entrar no Sistema</h5>
 		<!-- Método GET para permitir acesso ao menu temporariamente -->
-		<form action="menu.php" method="get">
+		<form action="menu.php" method="post">
 			<div class="form-row form-group">
 				<div class="col-xs-3 mx-auto">
 					<input type="text" name="email" id="email" class="form-control" placeholder="Email">
