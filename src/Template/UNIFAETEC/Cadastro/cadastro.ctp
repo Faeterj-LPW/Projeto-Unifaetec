@@ -25,23 +25,45 @@
 					<label for="nome" class="d-inline-block text-center w-100 normal-font">Nome</label>
 				</div>
 				<div class="col-md-4 px-0">
-					<input type="text" name="nome" id="name" class="form-control" placeholder="Nome completo">
+					<input type="text" name="nome" id="name" class="form-control" placeholder="Nome completo" required>
 				</div>
 			</div>
+			<div class="form-group row justify-content-center">
+				<div class="col-md-2 px-0">											
+					<label for="IdFuncional" class="d-inline-block text-center w-100 normal-font">IDFuncional/Matricula</label>
+				</div>
+				<div class="col-md-4 px-0">
+					<input value="" type="text" name="idfuncional" id="idfuncional" class="form-control" placeholder="ID Funcional/matricula" required>
+				</div>
+			</div> 
 			<div class="form-group row justify-content-center">
 				<div class="col-md-2 px-0">											
 					<label for="cpf" class="d-inline-block text-center w-100 normal-font">CPF</label>
 				</div>
 				<div class="col-md-4 px-0">
-					<input type="text" name="cpf" id="cpf" class="form-control" placeholder="000.000.000-00">
+					<input type="text" name="cpf" id="cpf" class="form-control" placeholder="000.000.000-00" required>
 				</div>
+			</div>
+			<div class="form-group row justify-content-center">
+				<div class="col-md-2 px-0">
+					<label for="unidade" class="d-inline-block text-center w-100 normal-font">Unidade</label>
+				</div>	
+				<div class="col-md-4 px-0 w-100">							
+					<select value="" type="" name="unidade" id="unidade" class="form-control" required>
+						<option value="" disabled selected>Selecione a unidade</option>
+						<option value="1">quintino</option>
+						<option value="2">Duque de Caxias</option>
+						<option value="3">marechal hermes</option>
+						<option value="4">centro</option>
+					</select>
+				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
 				<div class="col-md-2 px-0">
 					<label for="nascimento" class="d-inline-block text-center w-100 normal-font">Nascimento</label>
 				</div>
 				<div class="col-md-4 px-0">								
-					<input type="date" name="nascimento" id="birth" class="form-control" placeholder="dd/mm/aaaa">
+					<input type="date" name="nascimento" id="birth" class="form-control" placeholder="dd/mm/aaaa" required>
 				</div>
 			</div>
 			<div class="form-group row justify-content-center">
@@ -49,7 +71,7 @@
 					<label for="email" class="d-inline-block text-center w-100 normal-font">Email</label>
 				</div>	
 				<div class="col-md-4 px-0">							
-					<input type="email" name="email" id="email" class="form-control" placeholder="email@faeterj-rio.edu.br">
+					<input type="email" name="email" id="email" class="form-control" placeholder="email@faeterj-rio.edu.br" required>
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
@@ -57,7 +79,7 @@
 					<label for="senha" class="d-inline-block text-center w-100 normal-font">Senha</label>
 				</div>	
 				<div class="col-md-4 px-0">							
-					<input type="password" name="senha" id="password" placeholder="********" class="form-control">
+					<input type="password" name="senha" id="password" placeholder="********" class="form-control" required>
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
@@ -65,10 +87,6 @@
 					<div class="col-md-8 px-0">
 						<label class="dot"> Aluno
 							<input type="radio" id="rdaluno" name="radio" checked>
-							<span class="radiodot"></span>
-						</label>
-						<label class="dot"> Professor
-							<input type="radio" id="rdprofessor" name="radio">
 							<span class="radiodot"></span>
 						</label>
 						<label class="dot"> Funcionário
@@ -91,16 +109,15 @@
 <script>
 	function redirecionar(){
 		localStorage.setItem("nome", document.getElementById('name').value);
+		localStorage.setItem("id", document.getElementById('idfuncional').value);
+		localStorage.setItem("unidade", document.getElementById('unidade').value);
 		localStorage.setItem("cpf", document.getElementById('cpf').value);
 		localStorage.setItem("nascimento", document.getElementById('birth').value);
 		localStorage.setItem("email", document.getElementById('email').value);
-		localStorage.setItem("senha", document.getElementById('password').value);
+		localStorage.setItem("senha", document.getElementById('password').value);	
 
 		if (document.getElementById('rdaluno').checked) {
 			window.location.href = "aluno.php";
-		}
-		if (document.getElementById('rdprofessor').checked) {
-			window.location.href = "professor.php";
 		}
 		if (document.getElementById('rdfuncionario').checked) {
 			window.location.href = "funcionario.php";

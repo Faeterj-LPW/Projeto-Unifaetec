@@ -30,7 +30,7 @@
             $atividade->info_atividade = $this->request->getData('detAtividade');
 
             $tabela->inserir($atividade);
-
+            echo  "<script>alert('Atividade cadastrada com Sucesso!');</script>";
             $this->display();
         }
     }

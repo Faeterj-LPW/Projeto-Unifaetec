@@ -21,37 +21,15 @@
 				</div>
 			</div>					
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">											
-					<label for="matricula" class="d-inline-block text-center w-100 normal-font">Matrícula</label>
-				</div>
-				<div class="col-md-4 px-0">
-					<input type="text" name="matricula" id="id" class="form-control" placeholder="0000000000000">
-				</div>
-			</div>
-			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">
-					<label for="unidade" class="d-inline-block text-center w-100 normal-font">Unidade</label>
-				</div>
-				<div class="col-md-4 px-0">								
-					<select name="unidade" id="branch" class="form-control">
-						<option value="" disabled selected>Selecione a unidade</option>
-						<option value="">Campos Goytacazes</option>
-						<option value="">Duque de Caxias</option>
-						<option value="">Rio de Janeiro</option>
-						<option value="">Três Rios</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group row justify-content-center">
 				<div class="col-md-2 px-0">
 					<label for="turno" class="d-inline-block text-center w-100 normal-font">Turno</label>
 				</div>	
 				<div class="col-md-4 px-0">							
-					<select name="turno" id="shift" class="form-control">
+					<select name="turno" id="shift" class="form-control" required>
 						<option value="" disabled selected>Selecione o turno</option>
-						<option value="">Manhã</option>
-						<option value="">Tarde</option>
-						<option value="">Noite</option>
+						<option value="1">Manhã</option>
+						<option value="2">Tarde</option>
+						<option value="3">Noite</option>
 					</select>
 				</div>						
 			</div>
@@ -60,14 +38,12 @@
 					<label for="curso" class="d-inline-block text-center w-100 normal-font">Curso</label>
 				</div>	
 				<div class="col-md-4 px-0">								
-					<select name="curso" id="degree" class="form-control">
+					<select name="curso" id="degree" class="form-control" required>
 						<option value="" disabled selected>Selecione o curso</option>
-						<option value="">Análise de Sistemas Informatizados</option>
-						<option value="">Educação no Campo</option>
-						<option value="">Logística</option>
-						<option value="">Pedagogia</option>
-						<option value="">Processos Gerenciais</option>
-						<option value="">Surdez e Letramento Infantil</option>
+						<option value="1">Informática</option>
+						<option value="2">Eletrônica</option>
+						<option value="3">Administração</option>
+						<option value="4">Moda</option>
 					</select>
 				</div>						
 			</div>
@@ -77,11 +53,13 @@
 				</div>
 			</div>
 			<div>
-				<input type="text" name="nome" id="name" hidden>
-				<input type="text" name="cpf" id="cpf" hidden>
-				<input type="date" name="nascimento" id="birth" hidden>
-				<input type="email" name="email" id="email" hidden>
-				<input type="password" name="senha" id="password" hidden>
+			<input type="text" name="nome" id="nome" hidden>
+			<input type="password" name="idfuncional" id="idfuncional" hidden>
+			<input type="text" name="unidade" id="unidade" hidden>
+			<input type="text" name="cpf" id="cpf" hidden>
+			<input type="date" name="nascimento" id="nascimento" hidden>
+			<input type="email" name="email" id="email" hidden>
+			<input type="password" name="senha" id="senha" hidden>
 			</div>
 		</form>
 	</div>
@@ -90,11 +68,13 @@
 <?php $this->append('script'); ?>
 <script>
 	function pegarDados() {
-		document.getElementById("name").value = localStorage.getItem("nome");
+		document.getElementById("nome").value = localStorage.getItem("nome");
+		document.getElementById("idfuncional").value = localStorage.getItem("id");
+		document.getElementById("unidade").value = localStorage.getItem("unidade");
 		document.getElementById("cpf").value = localStorage.getItem("cpf");
-		document.getElementById("birth").value = localStorage.getItem("nascimento");
+		document.getElementById("nascimento").value = localStorage.getItem("nascimento");
 		document.getElementById("email").value = localStorage.getItem("email");
-		document.getElementById("password").value = localStorage.getItem("senha");
+		document.getElementById("senha").value = localStorage.getItem("senha");
 	}
 	window.onload = pegarDados;
 </script>
