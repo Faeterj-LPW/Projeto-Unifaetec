@@ -2,8 +2,10 @@
     namespace App\Controller\UNIFAETEC;
 
     use App\Controller\AppController;
-    use Cake\Datasource\ConnectionManager;
     use DateTime;
+
+    use App\Model\Entity\ProducaoAcademica;
+    use App\Model\Table\ProducaoAcademicaTable;
 
     class CadastroTrabAcdController extends AppController
     {
@@ -15,20 +17,21 @@
         }
 
         public function add()
-        {
-            // Dump de campos do formulário
-            // var_dump($this->request->getData());
-            $conn = ConnectionManager::get('default');
-            $conn->insert('producao_academica', [
-                'titulo' => $this->request->getData('titulo'),
-                // **** Campo não está presente no banco ****
-                // 'palavra_chave' => $this->request->getData('palavra_chave'),
-                'id_categoria_producao' => $this->request->getData('categoria'),
-                'resumo' => $this->request->getData('resumo'),
-                'data_envio' => new DateTime('now'),
-                'id_usuario' => '0', // Dependência ainda não modelada
-                'arquivo' => '0' // Upload não implementado
-            ], ['data_envio' => 'datetime']);
+        {   
+            $tabela = new ProducaoAcademicaTable();
+
+            $producao = new ProducaoAcademica();
+            $producao->titulo = $this->request->getData('titulo');
+            // **** Campo não está presente no banco ****
+            // $producao->palavra_chave = $this->request->getData('palavra_chave');
+            $producao->id_categoria_producao = $this->request->getData('categoria');
+            $producao->resumo = $this->request->getData('resumo');
+            $producao->data_envio = new DateTime('now');
+            $producao->id_usuario = '0'; // Dependência ainda não modelada
+            $producao->arquivo = '0'; // Upload não implementado
+
+            $tabela->inserir($producao);
+
             $this->display();
         }
     }

@@ -89,7 +89,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/controle_de_agenda.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'ControleDeAgenda', 
                     'action' => 'display']);
     $routes->connect('/cadastrar_atv_acd.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'CadastrarAtvAcd', 
-                    'action' => 'display']);
+                    'action' => 'display', '_method' => 'GET']);
     $routes->connect('/gerar_lista_de_pres.php', ['prefix' => 'UNIFAETEC/Atividades', 'controller' => 'GerarListaDePres', 
                     'action' => 'display']);
                     
@@ -105,6 +105,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     #Rotas REST
     $routes->resources('CadastroTrabAcd', ['prefix' => 'UNIFAETEC', 'path' => 'trabalhos.php']);
+    $routes->resources('CadastrarAtvAcd', ['prefix' => 'UNIFAETEC/Atividades', 'path' => 'cadastrar_atv_acd.php']);
 
     #Regras genéricas
     $routes->connect('/*', ['prefix' => 'UNIFAETEC', 'controller' => 'Unifaetec', 'action' => 'display']);
