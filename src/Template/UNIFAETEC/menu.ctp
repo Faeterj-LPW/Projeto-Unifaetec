@@ -1,10 +1,7 @@
 <?php 
-
 // Preloader do menu incompatível com versões mais recentes do jQuery
 $this->Html->script(['/lib/jquery/jquery-1.11.2.min.js', '/js/asset.js'], ['block' => true]);
-
 ?>
-
 <!-- Preloader -->
 <div id="loading">
 	<div id="loading-center">
@@ -51,6 +48,54 @@ $this->Html->script(['/lib/jquery/jquery-1.11.2.min.js', '/js/asset.js'], ['bloc
 	<div class="container mt-5 pb-5">
 		<!-- Primeira Linha -->
 		<div class="row">
+			<a href="trabalhos.php" class="col-lg-3 d-flex pb-5">
+				<div class="d-flex pr-3 pt-2">
+					<i class="fas fa-database"></i>
+				</div>
+				<div class="d-flex flex-column">
+					<h5 class="m-0 mb-2 font-weight-bold">Cadastro de Produções acadêmicas</h5>
+					<p class="m-0 h6">Publicar produções acadêmicas.</p>
+				</div>
+			</a>
+			<!--<a href="cadastrar_equipe.php" class="col-lg-3 d-flex pb-5">
+				<div class="d-flex pr-3 pt-2">
+					<i class="fas fa-users"></i>
+				</div>
+				<div class="d-flex flex-column">
+					<h5 class="m-0 mb-2 font-weight-bold">Cadastrar Equipe</h5>
+					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+				</div>
+			</a>!-->
+			<a href="consultar_bibl_virt.php" class="col-lg-3 d-flex pb-5">
+				<div class="d-flex pr-3 pt-2">
+					<i class="fas fa-book"></i>
+				</div>
+				<div class="d-flex flex-column">
+					<h5 class="m-0 mb-2 font-weight-bold">Consultar Biblioteca Virtual</h5>
+					<p class="m-0 h6">Consultar livros disponíveis.</p>
+				</div>
+			</a>
+			<a href="estatisticas.php" class="col-lg-3 d-flex pb-5">
+				<div class="d-flex pr-3 pt-2">
+					<i class="fas fa-chart-bar"></i>
+				</div>
+				<div class="d-flex flex-column">
+					<h5 class="m-0 mb-2 font-weight-bold">Estatísticas</h5>
+					<p class="m-0 h6">Visualizar estatísticas de dados cadastrados.</p>
+				</div>
+			</a>
+			<a href="emitir_cert.php" class="col-lg-3 d-flex pb-5">
+				<div class="d-flex pr-3 pt-2">
+					<i class="fas fa-certificate"></i>
+				</div>
+				<div class="d-flex flex-column">
+					<h5 class="m-0 mb-2 font-weight-bold">Gerar Certificado</h5>
+					<p class="m-0 h6">Gerar certificado de participação ou comparecimento em uma atividade.</p>
+				</div>
+			</a>
+		</div>		
+		<!-- Segunda Linha -->
+		<div class="row justify-content-center">
 			<a href="cadastrar_atv_acd.php" class="col-lg-3 d-flex pb-5">
 				<div class="d-flex pr-3 pt-2">
 					<i class="fas fa-university"></i>
@@ -60,13 +105,13 @@ $this->Html->script(['/lib/jquery/jquery-1.11.2.min.js', '/js/asset.js'], ['bloc
 					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
 				</div>
 			</a>
-			<a href="cadastrar_equipe.php" class="col-lg-3 d-flex pb-5">
+			<a href="inscricao_em_ativ_acad.php" class="col-lg-3 d-flex pb-5">
 				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-users"></i>
+					<i class="fas fa-user-plus"></i>
 				</div>
 				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Cadastrar Equipe</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<h5 class="m-0 mb-2 font-weight-bold">Inscrição em Atividade Acadêmica</h5>
+					<p class="m-0 h6">Inscrição nas atividades desenvolvidas pela UNIFAETEC.</p>
 				</div>
 			</a>
 			<a href="cad_part_ev_ext.php" class="col-lg-3 d-flex pb-5">
@@ -75,115 +120,49 @@ $this->Html->script(['/lib/jquery/jquery-1.11.2.min.js', '/js/asset.js'], ['bloc
 				</div>
 				<div class="d-flex flex-column">
 					<h5 class="m-0 mb-2 font-weight-bold">Cadastrar Participação em Evento Externo</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<p class="m-0 h6">Cadastramento de participação em eventos de fora da FAETEC.</p>
 				</div>
 			</a>
-			<a href="trabalhos.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-database"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Cadastro de Trabalhos acadêmicos</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
-		</div>		
-		<!-- Segunda Linha -->
-		<div class="row justify-content-center">
 			<a href="conf_presenca.php" class="col-lg-3 d-flex pb-5">
+			<!-- Gerenciador Unifaetec !-->
 				<div class="d-flex pr-3 pt-2">
 					<i class="far fa-id-card"></i>
 				</div>
 				<div class="d-flex flex-column">
 					<h5 class="m-0 mb-2 font-weight-bold">Confirmar Presença de Servidores</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<p class="m-0 h6">Certificar o comparecimento de servidores inscritos em uma atividade.</p>
 				</div>
+			<!-- Gerenciador Unifaetec !-->
 			</a>
-			<a href="consultar_bibl_virt.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-book"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Consultar Biblioteca Virtual</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
-			<a href="consultar_historico_atv.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-history"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Consultar Histórico de Atividades</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
+		</div>	
+		<!-- Terceira Linha -->
+		<div class="row justify-content-center">
 			<a href="controle_de_agenda.php" class="col-lg-3 d-flex pb-5">
 				<div class="d-flex pr-3 pt-2">
 					<i class="fas fa-calendar-alt"></i>
 				</div>
 				<div class="d-flex flex-column">
 					<h5 class="m-0 mb-2 font-weight-bold">Controle de Agenda de Atividades</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<p class="m-0 h6">Consulta de atividades.</p>
 				</div>
 			</a>
-		</div>	
-		<!-- Terceira Linha -->
-		<div class="row justify-content-center">
-			<a href="emitir_cert.php" class="col-lg-3 d-flex pb-5">
+			
+			<a href="consultar_historico_atv.php" class="col-lg-3 d-flex pb-5">
 				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-certificate"></i>
+					<i class="fas fa-history"></i>
 				</div>
 				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Emitir Certificado de Participação</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<h5 class="m-0 mb-2 font-weight-bold">Consultar Histórico de Atividades</h5>
+					<p class="m-0 h6">Consultar atividades da UNIFAETEC que participou.</p>
 				</div>
 			</a>
-			<a href="estatisticas.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-chart-bar"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Estatísticas</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
-			<a href="gerar_decl_comp.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="far fa-file"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Gerar Declaração de Comparecimento</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
-			<a href="gerar_doc.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-file-alt"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Gerar Documento</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
-		</div>	
-		<!-- Quarta Linha -->
-		<div class="row justify-content-center">
 			<a href="gerar_lista_de_pres.php" class="col-lg-3 d-flex pb-5">
 				<div class="d-flex pr-3 pt-2">
 					<i class="far fa-address-book"></i>
 				</div>
 				<div class="d-flex flex-column">
 					<h5 class="m-0 mb-2 font-weight-bold">Gerar Lista de Presença</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
-				</div>
-			</a>
-			<a href="inscricao_em_ativ_acad.php" class="col-lg-3 d-flex pb-5">
-				<div class="d-flex pr-3 pt-2">
-					<i class="fas fa-user-plus"></i>
-				</div>
-				<div class="d-flex flex-column">
-					<h5 class="m-0 mb-2 font-weight-bold">Inscrição em Atividade Acadêmica</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<p class="m-0 h6">Geração de lista de presença de atividade.</p>
 				</div>
 			</a>
 			<a href="index.php" class="col-lg-3 d-flex pb-5">
@@ -192,10 +171,10 @@ $this->Html->script(['/lib/jquery/jquery-1.11.2.min.js', '/js/asset.js'], ['bloc
 				</div>
 				<div class="d-flex flex-column">
 					<h5 class="m-0 mb-2 font-weight-bold">Sair</h5>
-					<p class="m-0 h6">Cadastramento de atividades a serem realizadas.</p>
+					<p class="m-0 h6">Sair do Sistema.</p>
 				</div>
 			</a>
-		</div>
+		</div>	
 	</div>	
 </section>
 <!-- Fim de Itens do Menu -->

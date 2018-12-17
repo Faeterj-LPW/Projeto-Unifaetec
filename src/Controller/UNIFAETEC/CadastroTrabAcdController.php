@@ -11,8 +11,8 @@
     {
         public function display(...$path)
         {
-            $this->set('title', 'Cadastro de Trabalhos Acadêmicos');
-            $this->set('barraTexto', 'Cadastro de Trabalhos Acadêmicos');
+            $this->set('title', 'Cadastro de Produções Acadêmicas');
+            $this->set('barraTexto', 'Cadastro de Produções Acadêmicas');
             $this->render('/UNIFAETEC/trabalhos', 'base');
         }
 
@@ -22,8 +22,7 @@
 
             $producao = new ProducaoAcademica();
             $producao->titulo = $this->request->getData('titulo');
-            // **** Campo não está presente no banco ****
-            // $producao->palavra_chave = $this->request->getData('palavra_chave');
+            $producao->palavra_chave = $this->request->getData('palavra_chave');
             $producao->id_categoria_producao = $this->request->getData('categoria');
             $producao->resumo = $this->request->getData('resumo');
             $producao->data_envio = new DateTime('now');

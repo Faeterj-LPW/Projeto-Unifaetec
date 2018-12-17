@@ -71,6 +71,8 @@ Router::scope('/', function (RouteBuilder $routes) {
                     'action' => 'display']);
     $routes->connect('/consultar_bibl_virt.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarBiblVirt', 
                     'action' => 'display']);
+    $routes->connect('/consultar_bibl_resp.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarBiblResp', 
+    'action' => 'display']);
     $routes->connect('/gerar_decl_comp.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDeclComp', 
                     'action' => 'display']);
 
