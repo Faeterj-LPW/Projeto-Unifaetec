@@ -3,6 +3,7 @@
 
     use App\Controller\AppController;
     use DateTime;
+    use App\Model\Entity\Cadastro;
     use App\Model\Table\CadastroTable;
 
     class CadastroController extends AppController

@@ -2,6 +2,7 @@
     namespace App\Controller\UNIFAETEC\Cadastro;
 
     use App\Controller\AppController;
+    use App\Model\Entity\CadProfessor;
     use App\Model\Table\ProfessorTable;
 
     class ProfessorController extends AppController

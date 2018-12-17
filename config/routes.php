@@ -52,12 +52,14 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     #Páginas de cadastro
     $routes->connect('/cadastro.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Cadastro', 'action' => 'display']);
-    $routes->connect('/aluno.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Aluno', 'action' => 'display']);
+    $routes->connect('/aluno.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Aluno', 'action' => 'display', '_method' => 'GET']);
     $routes->connect('/funcionario.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Funcionario', 'action' => 'display']);
     $routes->connect('/professor.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Professor', 'action' => 'display']);
+    $routes->connect('/usuario.php', ['prefix' => 'UNIFAETEC/Cadastro', 'controller' => 'Usuario', 'action' => 'add', '_method' => 'GET']);
     
     #Menu
     $routes->connect('/menu.php', ['prefix' => 'UNIFAETEC', 'controller' => 'Menu', 'action' => 'display']);
+    
 
     #Funcionalidades
     $routes->connect('/consultar_historico_atv.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarHistoricoAtv', 
@@ -72,7 +74,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/consultar_bibl_virt.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarBiblVirt', 
                     'action' => 'display']);
     $routes->connect('/consultar_bibl_resp.php', ['prefix' => 'UNIFAETEC', 'controller' => 'ConsultarBiblResp', 
-    'action' => 'display']);
+                    'action' => 'display']);
     $routes->connect('/gerar_decl_comp.php', ['prefix' => 'UNIFAETEC', 'controller' => 'GerarDeclComp', 
                     'action' => 'display']);
 
@@ -106,6 +108,7 @@ Router::scope('/', function (RouteBuilder $routes) {
                     'action' => 'display']);
 
     #Rotas REST
+    $routes->resources('Usuario', ['prefix' => 'UNIFAETEC/Cadastro', 'path' => 'usuario.php']);
     $routes->resources('CadastroTrabAcd', ['prefix' => 'UNIFAETEC', 'path' => 'trabalhos.php']);
     $routes->resources('CadastrarAtvAcd', ['prefix' => 'UNIFAETEC/Atividades', 'path' => 'cadastrar_atv_acd.php']);
 

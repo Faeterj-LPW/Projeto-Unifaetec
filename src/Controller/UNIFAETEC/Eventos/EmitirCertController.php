@@ -8,7 +8,7 @@
         public function display(...$path)
         {
             $this->set('title', 'Emitir Certificado');
-            $this->set('barraTexto', 'Emitir Certificados de Participação');
+            $this->set('barraTexto', 'Emitir Certificados de Participação ou Comparecimento');
             $this->render('/UNIFAETEC/Eventos/emitir_cert', 'base');
         }
     }

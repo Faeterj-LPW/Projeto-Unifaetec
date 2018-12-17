@@ -3,7 +3,7 @@
 	<div class="container-fluid pb-5">
 		<div class="row">
 			<div class="col-md-10 mx-auto text-center">
-				<img src="img/faetec.jpg" class="img-fluid">
+			<img class="mt-2" src="<?= \Cake\Routing\Router::fullBaseUrl() . $this->request->webroot ?>img/logo.jpeg">
 			</div>	
 		</div>
 		<!--Feedback do que ocorreu-->
@@ -18,7 +18,7 @@
 		<form action="menu.php" method="post">
 			<div class="form-row form-group">
 				<div class="col-xs-3 mx-auto">
-					<input type="text" name="email" id="email" class="form-control" placeholder="Email">
+					<input type="text" name="idmatricula" id="idmatricula" class="form-control" placeholder="ID Funcional ou Matrícula">
 				</div>
 			</div>
 			<div class="form-row form-group mb-3">

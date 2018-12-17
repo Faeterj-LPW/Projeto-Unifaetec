@@ -1,7 +1,7 @@
 <!-- Rodapé -->
 <footer class="footer">
 	<div id="navfit">
-		<small><strong>Faetec-RJ</strong> - Secretaria de Ciência, Tecnologia e Inovação.</small>			
+		<img class="h-100" src="<?= \Cake\Routing\Router::fullBaseUrl() . $this->request->webroot ?>img/rodape.jpeg">			
 	</div>
     <?= (!empty($botaoAusente)) ? '' : $this->element('/UNIFAETEC/botaoVoltar') ?>
 </footer>		

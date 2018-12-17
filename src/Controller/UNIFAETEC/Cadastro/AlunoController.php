@@ -2,6 +2,7 @@
     namespace App\Controller\UNIFAETEC\Cadastro;
 
     use App\Controller\AppController;
+    use App\Model\Entity\CadAluno;
     use App\Model\Table\AlunoTable;
 
     class AlunoController extends AppController

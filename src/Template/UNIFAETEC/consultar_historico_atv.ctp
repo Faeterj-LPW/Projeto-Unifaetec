@@ -12,25 +12,35 @@
 
 <!-- Formulário de pesquisa -->
 <div class="container">
-	<form class="valign w-100">
-		<div class="form-group d-flex justify-content-center mb-2">
-			<div class="col-md-4">
-				<label for="busca" class="normal-font">Consultar</label>
-				<div class="input-group mb-2">
-					<div class="input-group-prepend">
-						<div class="input-group-text">
-							<i class="fas fa-search"></i>
-						</div>
-					</div>
-					<input type="text" class="form-control" id="busca" placeholder="Nome, local ou evento">
-				</div>
-			</div>
-		</div>
-		<div class="form-group d-flex justify-content-center">
-			<div class="col-md-4">
-				<button type="button" class="btn btn-success w-100">Pesquisar</button>
-			</div>
-		</div>
-	</form>
+	<table class="table table-responsive-md table-hover">
+		<thead>
+			<tr>
+				<th scope="col">Evento</th>
+				<th scope="col">Descrição</th>
+				<th scope="col">Data</th>
+				<th scope="col">Hora</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Palestra ABC</th>
+				<td>Palestra sobre alfabeto</td>
+				<td>10/10/2018</td>
+				<td>12:00</td>
+			</tr>
+			<tr>
+				<th scope="row">Projeto 123</th>
+				<td>Projeto de criação de numer....</td>
+				<td>20/02/2018</td>
+				<td>12:00</td>
+			</tr>
+			<tr>
+				<th scope="row">Aula Set</th>
+				<td>Aula sobre set de ..</td>
+				<td>12/01/2018</td>
+				<td>12:00</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 <!-- Fim do formulário de pesquisa -->

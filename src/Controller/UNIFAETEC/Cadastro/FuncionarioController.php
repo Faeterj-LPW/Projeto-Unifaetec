@@ -2,6 +2,7 @@
     namespace App\Controller\UNIFAETEC\Cadastro;
 
     use App\Controller\AppController;
+    use App\Model\Entity\CadFuncionario;
     use App\Model\Table\FuncionarioTable;
 
     class FuncionarioController extends AppController

@@ -12,31 +12,48 @@
 
 <!--Formulário-->
 <div class="container">
-	<form class="valign w-100">
-		<div class="form-group d-flex justify-content-center">
-			<div class="col-md-6">
-				<label for="Nome">Nome do Servidor</label>
-				<input type="text" class="form-control" name="Nome" placeholder="ex: Maria das Graças" required>
-			</div>
-		</div>
-		<div class="form-group d-flex justify-content-center">
-			<div class="col-md-3">
-				<label for="DataEvento">Data do Evento</label>
-				<input type="date" class="form-control" name="DataEvento" required>
-			</div>
-			<div class="col-md-3">
-				<label for="Evento">Evento</label>
-				<select class="form-control" name="Evento" required>
-					<option>Evento 01</option>
-					<option>Evento 02</option>
-					<option>Evento 03</option>
-					<option>Evento 04</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-group d-flex justify-content-center">
-			<button type="button" class="btn btn-success px-4">Gerar PDF</button>
-		</div>
-	</form>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th scope="col">Usuário</th>
+				<th scope="col">Atividade</th>
+				<th scope="col">Data</th>
+				<th scope="col">Local</th>
+				<th scope="col">Gerar Certificado</th>
+			</tr>
+		</thead>
+		<tbody>
+    		<tr>
+				<th scope="row">José da Silva</th>
+				<td>Palestra ABC</td>
+				<td>10/10/2018</td>
+				<td>Rua AML, 542 - Centro</td>
+				<td>
+					<button type="button" class="btn btn-success px-4">Participação</button>
+					<button type="button" class="btn btn-success px-4">Comparecimento</button>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">José da Silva</th>
+				<td>Projeto 123</td>
+				<td>10/12/2018</td>
+				<td>Rua AML, 542 - Centro</td>
+				<td>
+					<button type="button" class="btn btn-success px-4">Participação</button>
+					<button type="button" class="btn btn-success px-4">Comparecimento</button>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">José da Silva</th>
+				<td>Aula Set</td>
+				<td>03/10/2018</td>
+				<td>Rua AML, 542 - Centro</td>
+				<td>
+					<button type="button" class="btn btn-success px-4" disabled>Participação</button>
+					<button type="button" class="btn btn-success px-4">Comparecimento</button>
+				</td>
+			</tr>
+		<tbody>
+	</table>
 </div>
 <!--Fim do Formulário-->

@@ -2,7 +2,9 @@
     namespace App\Controller\UNIFAETEC\Cadastro;
 
     use App\Controller\AppController;
+    use App\Model\Entity\CadUsuario;
     use App\Model\Table\UsuarioTable;
+    use Cake\ORM\TableRegistry;
 
     class UsuarioController extends AppController
     {
@@ -19,6 +21,13 @@
             $usuario->matricula_usuario = $this->request->getData('idfuncional');
             $usuario->unidade_usuario = $this->request->getData('unidade');
             $tabela->inserir($usuario);
+
+            $query = $this->Usuario
+                ->find()
+                ->where(['matricula_funcional' => $usuario->matricula_usuario])
+                ->first(); 
+            $result = debug($query->title);
+            echo  "<script>alert('Usuario cadastrado com Sucesso! <?php $result ?>');</script>";
         }
     }
 ?>

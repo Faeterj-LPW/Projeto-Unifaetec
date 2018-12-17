@@ -14,7 +14,7 @@
 		<div id="sendmessage"></div>
 		<!-- Erro de envio -->
 		<div id="errormessage"></div>				
-		<form class="container-fluid" action="" method="post">
+		<form class="container-fluid" action="usuario.php" method="post">
 			<div class="form-group row justify-content-center">
 				<div class="col-md-4 px-0">
 					<h4 class="text-center">Dados do Aluno</h4>
@@ -48,8 +48,8 @@
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-6 px-0 d-flex justify-content-end">						
-					<button type="button" name="button" id="button" class="col-md-8 btn btn-success">Cadastrar</button>
+				<div class="form-group d-flex justify-content-center">
+					<button type="submit" class="btn btn-success px-5">Cadastrar</button>
 				</div>
 			</div>
 			<div>

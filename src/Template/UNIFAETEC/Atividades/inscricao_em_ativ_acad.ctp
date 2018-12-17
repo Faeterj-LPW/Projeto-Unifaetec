@@ -14,19 +14,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>busca no banco</td>
-                        <td>busca no banco</td>
-                        <td>busca no banco</td>
+                        <th scope="row">Palestra ABC</th>
+                        <td>Palestra sobre alfabeto</td>
+                        <td>10/10/2019</td>
+                        <td>12:00</td>
                         <td>
                         <button type="button" class="btn btn-success px-5">Participar</button>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>busca no banco</td>
-                        <td>busca no banco</td>
-                        <td>busca no banco</td>
+                        <th scope="row">Projeto 123</th>
+                        <td>Projeto de criação de numer....</td>
+                        <td>20/02/2019</td>
+                        <td>12:00</td>
+                        <td>
+                        <button type="button" class="btn btn-success px-5">Participar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Aula Set</th>
+                        <td>Aula sobre set de ..</td>
+                        <td>12/01/2019</td>
+                        <td>12:00</td>
                         <td>
                         <button type="button" class="btn btn-success px-5">Participar</button>
                         </td>
