@@ -2,8 +2,8 @@
 <section class="text-center">
 	<div class="container-fluid pb-5">
 		<div class="row">
-			<div class="col-md-10 mx-auto text-center">
-			<img class="mt-2" src="<?= \Cake\Routing\Router::fullBaseUrl() . $this->request->webroot ?>img/logo.jpeg">
+			<div class="col-sm-10 mx-auto text-center">
+				<img class="mt-2 w-100" src="<?= \Cake\Routing\Router::fullBaseUrl() . $this->request->webroot ?>img/logo.jpg">
 			</div>	
 		</div>
 		<!--Feedback do que ocorreu-->
@@ -17,12 +17,12 @@
 		<!-- Método GET para permitir acesso ao menu temporariamente -->
 		<form action="menu.php" method="post">
 			<div class="form-row form-group">
-				<div class="col-xs-3 mx-auto">
+				<div class="col-sm-3 mx-auto">
 					<input type="text" name="idmatricula" id="idmatricula" class="form-control" placeholder="ID Funcional ou Matrícula">
 				</div>
 			</div>
 			<div class="form-row form-group mb-3">
-				<div class="col-xs-3 mx-auto">
+				<div class="col-sm-3 mx-auto">
 					<input type="password" name="senha" id="password" class="form-control" placeholder="Senha">
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 				<span class="checkmark"></span>
 			</label>
 			<div class="form-row form-group mt-2">
-				<div class="col-xs-3 mx-auto">
+				<div class="col-sm-3 mx-auto">
 					<button class="btn btn-success px-5" name="button" type="submit">Entrar</button>
 				</div>
 			</div>

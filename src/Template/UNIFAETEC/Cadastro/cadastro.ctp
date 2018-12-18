@@ -21,7 +21,7 @@
 				</div>
 			</div>					
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">											
+				<div class="col-md-3 px-0">											
 					<label for="nome" class="d-inline-block text-center w-100 normal-font">Nome</label>
 				</div>
 				<div class="col-md-4 px-0">
@@ -29,15 +29,15 @@
 				</div>
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">											
-					<label for="IdFuncional" class="d-inline-block text-center w-100 normal-font">IDFuncional/Matricula</label>
+				<div class="col-md-3 px-0">											
+					<label for="IdFuncional" class="d-inline-block text-center w-100 normal-font">IDFuncional/Matrícula</label>
 				</div>
 				<div class="col-md-4 px-0">
-					<input value="" type="text" name="idfuncional" id="idfuncional" class="form-control" placeholder="ID Funcional/matricula" required>
+					<input value="" type="text" name="idfuncional" id="idfuncional" class="form-control" placeholder="ID Funcional/Matrícula" required>
 				</div>
 			</div> 
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">											
+				<div class="col-md-3 px-0">											
 					<label for="cpf" class="d-inline-block text-center w-100 normal-font">CPF</label>
 				</div>
 				<div class="col-md-4 px-0">
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">
+				<div class="col-md-3 px-0">
 					<label for="unidade" class="d-inline-block text-center w-100 normal-font">Unidade</label>
 				</div>	
 				<div class="col-md-4 px-0 w-100">							
@@ -59,7 +59,7 @@
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">
+				<div class="col-md-3 px-0">
 					<label for="nascimento" class="d-inline-block text-center w-100 normal-font">Nascimento</label>
 				</div>
 				<div class="col-md-4 px-0">								
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">
+				<div class="col-md-3 px-0">
 					<label for="email" class="d-inline-block text-center w-100 normal-font">Email</label>
 				</div>	
 				<div class="col-md-4 px-0">							
@@ -75,7 +75,7 @@
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-2 px-0">
+				<div class="col-md-3 px-0">
 					<label for="senha" class="d-inline-block text-center w-100 normal-font">Senha</label>
 				</div>	
 				<div class="col-md-4 px-0">							
@@ -83,8 +83,8 @@
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-6 px-0 d-flex justify-content-end">	
-					<div class="col-md-8 px-0">
+				<div class="col-md-7 px-0 d-flex justify-content-end">	
+					<div class="col-md-7 px-0 pl-2">
 						<label class="dot"> Aluno
 							<input type="radio" id="rdaluno" name="radio" checked>
 							<span class="radiodot"></span>
@@ -97,8 +97,8 @@
 				</div>						
 			</div>
 			<div class="form-group row justify-content-center">
-				<div class="col-md-6 px-0 d-flex justify-content-end">						
-					<button type="button" name="button" id="button" class="col-md-8 btn btn-success" onclick="redirecionar()">Próximo Passo >></button>
+				<div class="col-md-7 px-0 d-flex justify-content-end">						
+					<button type="button" name="button" id="button" class="col-md-7 btn btn-success" onclick="redirecionar()">Próximo Passo >></button>
 				</div>
 			</div>
 		</form>				
