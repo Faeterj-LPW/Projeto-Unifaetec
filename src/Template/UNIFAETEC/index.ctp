@@ -3,7 +3,7 @@
 	<div class="container-fluid pb-5">
 		<div class="row">
 			<div class="col-sm-10 mx-auto text-center">
-				<img class="mt-2 w-50" src="<?= \Cake\Routing\Router::fullBaseUrl() . $this->request->webroot ?>img/logo.jpg">
+				<img class="mt-2 w-50" src="<?= \Cake\Routing\Router::fullBaseUrl() . $this->request->getAttribute('webroot') ?>img/logo.jpg">
 			</div>	
 		</div>
 		<!--Feedback do que ocorreu-->
